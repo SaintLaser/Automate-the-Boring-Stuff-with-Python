@@ -1,1 +1,208 @@
-#I love 
+# I like classical musics. Japan anime, Legend of Galaxy Heroes, utilizes lots claascial music. I also acquired some. However, the .cue files are coded by a code that is popular in Japan. As a Chinese, it is easy for me to figure out the meaning of Japanese characters. So, I decided to convert all .cue, .txt, .log files into utf8.
+
+
+
+First thing first. Let's chest what do we have here
+
+
+######################################################
+import os
+a=0
+
+def gci(filepath):
+    global a  
+    files = os.listdir(filepath)  #遍历filepath下所有文件，包括子目录  
+    for fi in files:    
+        fi_d = os.path.join(filepath,fi)    
+        if os.path.isdir(fi_d):
+            print(os.path.join(filepath, fi_d))
+            gci(fi_d)    
+        else:      
+            print(os.path.join(filepath,fi_d))#递归遍历/root目录下所有文件
+            a=a+1
+gci('D:\\New Folder\\')
+print('There are '+ str(a) + ' files.')
+########################################################
+Output:
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\銀河英雄伝説 CD-BOX 銀河帝国SIDE.txt
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC1
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC1\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC1\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC1\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC1\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC1\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC10
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC10\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC10\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC10\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC10\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC10\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC11
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC11\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC11\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC11\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC11\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC11\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC12
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC12\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC12\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC12\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC12\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC12\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC2
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC2\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC2\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC2\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC2\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC2\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC2\tag - Copy.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC3
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC3\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC3\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC3\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC3\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC3\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC4
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC4\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC4\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC4\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC4\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC4\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC5
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC5\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC5\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC5\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC5\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC5\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC6
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC6\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC6\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC6\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC6\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC6\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC7
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC7\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC7\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC7\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC7\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC7\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC8
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC8\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC8\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC8\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC8\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC8\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC9
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC9\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC9\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC9\tag.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC9\tta.cue
+D:\New Folder\[EAC](サントラ) [071010] 銀河英雄伝説 CD-BOX 銀河帝国SIDE(12tta+cue)\DISC9\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\自由惑星同盟 (2).txt
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\自由惑星同盟.txt
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC1
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC1\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC1\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC1\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC1\tag2.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC1\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC1\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC10
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC10\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC10\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC10\CDImage.tta
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC10\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC10\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC10\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC2
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC2\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC2\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC2\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC2\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC2\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC3
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC3\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC3\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC3\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC3\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC3\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC4
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC4\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC4\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC4\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC4\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC4\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC5
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC5\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC5\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC5\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC5\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC5\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC6
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC6\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC6\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC6\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC6\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC6\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC7
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC7\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC7\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC7\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC7\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC7\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC8
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC8\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC8\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC8\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC8\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC8\不明なタイトル.log
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC9
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC9\CDImage.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC9\CDImage.flac
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC9\CDImage.tta
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC9\tag.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC9\tta.cue
+D:\New Folder\[EAC](サントラ) [071024] 銀河英雄伝説 CD-BOX 自由惑星同盟SIDE(10tta+cue)\DISC9\不明なタイトル.log
+There are 117 files.
+#######################################################
+
+So, we need a script to do the job.
+
+#######################################################
+
+import os
+import chardet
+
+def gci(choosenfilepath):
+    files = os.listdir(choosenfilepath)#遍历choosenfilepath下所有文件，包括子目录  
+    for fi in files:    
+        fi_d = os.path.join(choosenfilepath,fi)
+        fi_t = os.path.splitext(fi)[1]
+        if os.path.isdir(fi_d): #如果choosenfilepath下的文件是路径，则优先递归遍历/root目录下所有文件
+            print(os.path.join(choosenfilepath, fi_d))
+            gci(fi_d)
+        if  (fi_t == '.log')or(fi_t == '.txt')or(fi_t == '.cue'):#对于文件路径，筛选文件后缀
+            #print('后缀名是'+os.path.splitext(fi)[1])
+            #print('路径是'+fi_d)
+            original_file_code = str(chardet.detect(open(os.path.join(fi_d),'rb').read())['encoding']) #探测文件编码类型
+            #print('原编码'+original_file_code)
+            target_file_code = 'utf8' 目标编码设置
+            #print('目标编码'+target_file_code)
+            try:  #尝试改变文件编码，因为有一些文件的编码无法改变(目前的代码无能为力)
+                temp_content = open(fi_d,'rb').read()
+                temp_content= temp_content.decode(original_file_code).encode(target_file_code)
+                new_file = open(fi_d,'wb').write(temp_content)
+            except:
+                print('error, but continue')
+
+
+
+gci('D:\\New Folder\\')
+
+
+###################################################################################################
+It should be enough to solve all the problems.
+
+
